@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pro ba</title>
+	<style type="text/css">
+		:root{
+			--narancs: #CE4B12;
+			--jobbnarancs: #E85314;
+			--balpad: 20px;
+			--szurke: #757575;
+			--jobbszurke: #A0A0A0;
+
+			--headheight: 79px;
+		}
+		#modal{
+			margin-top: 89px;
+
+			position: fixed;
+
+			border-radius: 20px;
+			box-shadow: 0 0 10px #00000025;
+			background-color: white;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		#modal #kished{
+			background-color: var(--narancs);
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			padding: 20px;
+		}
+		#modal h1{
+			font-size: 18px;
+			color: white;
+			line-height: 11px;
+			padding-left: 0;
+			margin-top: 0px;
+			text-transform: uppercase;
+		}
+		#modal h1:last-child{
+			margin-bottom: 0px;
+		}
+		#modal input:nth-child(2){
+			margin-top: 20px;
+		}
+		#modal input{
+			font-size: 15px;
+			padding: 10px;
+			outline-style: none;
+			border-radius: 20px;
+			border: 1px solid var(--szurke);
+			color: var(--szurke);
+			margin-top: 10px;
+			margin-left: 20px;
+			width: calc(100% - 60px);
+		}
+		#modal textarea{
+			height: 200px;
+			font-size: 15px;
+			padding: 10px;
+			outline-style: none;
+			border-radius: 20px;
+			border: 1px solid var(--szurke);
+			color: var(--szurke);
+			margin-top: 10px;
+			margin-left: 20px;
+			width: calc(100% - 60px);
+			resize: none;
+		}
+		#modal input[type=submit]{
+			font-size: 1.2rem;
+			font-family: spectral, sans-serif;
+			border: none;
+			border-radius: 3rem;
+			background-color: var(--narancs);
+			color: white;
+			width: 130px;
+			
+			padding: 7px 25px 7px 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: calc(50% - 72px);
+		}
+	</style>
+</head>
+<body>
+	<content>
+		<div id="modal">
+		    <form method="post" action="postman.php">
+			  <div id="kished">
+			    <h1><input value="mutermi" id="mTb" name="mifele" type="hidden">Műtermi kutya-gazdi</h1>
+			    <h1><input value="kicsi" id="mCsb" name="mennyiert" type="hidden">KIS CSOMAG</h1>
+			  </div>
+		      <input type="text" name="email" value="E-mail cím:" required>
+		      <input type="phone" name="telo" value="Telefonszám:">
+		      <textarea name="msg">Üzenet:</textarea>
+		      <input type="submit" value="KÜLDÉS">
+		    </form>
+		  </div>
+	</content>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>

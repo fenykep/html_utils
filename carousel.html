@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	simple carousel
+	still needs index buttons
+-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pro ba</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		header{
+			height: 50px;
+			border-style: solid;
+			border-color: green;
+			align-content: center;
+			justify-content: center;
+		}
+		div{
+			width: 100%;
+			margin: none;
+		}
+
+		#rkep{
+			height: 500px;
+
+			overflow-x:  hidden;
+			position: absolute;
+			opacity: 100%;
+			transition: 1.9s;
+		}
+
+		#ukep{
+			height: 500px;
+		}
+
+		#carcont ul{
+			position: absolute;
+			top: 500px;
+			left: 50%;
+
+			padding-left: 0px;
+		}
+
+		#carcont ul li{
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			border-style: solid;
+			border-color: grey;
+			background-color: grey;
+			border-radius: 50%;
+
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<content>
+		<div id="carcont">
+			<img id="rkep" src="1.png">
+			<img id="ukep" src="2.png">
+			<ul>
+				<li onclick="gotoimg(1)"></li>
+				<li onclick="gotoimg(2)"></li>
+				<li onclick="gotoimg(3)"></li>
+		</ul>
+		</div>
+		
+	</content>
+	<script type="text/javascript">
+		setInterval(carousel, 3000);
+		var ukep = document.getElementById("ukep");
+		var rkep = document.getElementById("rkep");
+		let kepek = ["1.png", "2.png", "3.png"];
+		var i = 1;
+		function carousel(){
+			ukep.src=kepek[i];
+			rkep.style.opacity="0%";
+			setTimeout(srchange,2000);
+			if(i<kepek.length-1){i++;}
+			else{i=0;}
+		}
+		function srchange(){
+			rkep.src=ukep.src;
+			rkep.style.opacity="100%";
+		}
+		function stop(){
+			clearInterval(1);
+		}
+		function gotoimg(x){
+			console.log(x);
+			clearInterval(1);
+			//vagy csak restart the interval
+			i=x-1;
+			rkep.style.transition="0.5s";
+			carousel();
+		}
+	</script>
+</body>
+</html>

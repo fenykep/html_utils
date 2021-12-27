@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Szia</title>
+  </head>
+  <body>
+    <style type="text/css">
+      form{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
+      input{
+        color: red;
+        font-size: 40px;
+        margin-top: 20px;
+      }
+      textarea{
+        margin-top: 20px;
+        height: 170px;
+      }
+    </style>
+    <main>
+      <form method="post" action="toltsed.php">
+        <input type="text" name="cim">
+        <input type="text" name="kep">
+        <textarea name="szoveg">Üzenet:</textarea>
+        <input type="submit" onclick="elment()" value="KÜLDÉS">
+    </form>
+    </main>
+  </body>
+  <script type="text/javascript">
+    function elment(){
+      console.log("aaaaaa");
+    }
+  </script>
+</html>

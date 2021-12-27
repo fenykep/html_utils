@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculador</title>
+	<link rel="stylesheet" type="text/css" href="calc.css"/>
+</head>
+<body>
+	<header></header>
+	<content>
+		<div class="muv" onclick="muveleti(this)">+</div>
+		<div class="muv" onclick="muveleti(this)">-</div>
+		<div class="muv" onclick="szamolj(muvelet)">=</div>
+		<div class="muv" onclick="nulo()">C</div>
+	</content>
+	<script type="text/javascript">
+		var cont = document.getElementsByTagName('content')[0];
+		var elsoszam = "";
+		var masikszam = 0;
+		var muvelet = "";
+		for (var i = 0; i < 10; i++) {
+			cont.innerHTML += `<div onclick="ne(${i})" class="szam">${i}</div>`
+		}
+		function ne(n){
+			elsoszam+=n;
+			console.log(elsoszam);
+		}
+
+		function nulo(){
+			elsoszam = "";
+			masikszam = 0;
+			console.log(0);
+		}
+
+		function muveleti(melyik){
+			muvelet=melyik.innerHTML;
+			szamolj(muvelet);
+		}
+
+		function szamolj(){
+			if (muvelet=="") {
+
+			}
+			else if (muvelet=="+") {
+				masikszam+=Number(elsoszam);
+			}
+			else if(muvelet=="-"){
+				masikszam-=Number(elsoszam);
+			}
+			elsoszam="";
+			console.log(masikszam);
+			//muvelet="";
+		}
+	</script>
+</body>
+</html>

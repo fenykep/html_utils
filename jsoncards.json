@@ -1,0 +1,19 @@
+kartyak = `
+[
+    {
+        "nem": "Peti",
+        "wok": "nörsz"
+    },
+    {
+        "nem": "Beatricse",
+        "wok": "dobozszerelő"
+    },
+    {
+        "nem": "Karl",
+        "wok": "apetitician"
+    },
+    {
+        "nem": "Jan",
+        "wok": "bulletmaster"
+    }
+]`;
